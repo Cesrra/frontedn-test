@@ -1,0 +1,25 @@
+{
+  "name": "frontend-test",
+  "version": "1.0.0",
+  "description": "This is a test to Axiacore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cesrra/frontend-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cesrra/frontend-test/issues"
+  },
+  "homepage": "https://github.com/Cesrra/frontend-test#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
