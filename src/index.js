@@ -1,7 +1,7 @@
-import '@styles/index.scss'
+import '@styles/main.scss'
 import Template from '@templates/Template.js';
 
-(async function App() {
+(function App() {
     const main = null || document.getElementById('main');
-    main.innerHTML = await Template();
+    main.innerHTML = Template();
 })();
