@@ -10,8 +10,6 @@ import Filter from '@templates/Filter';
 
 document.addEventListener("DOMContentLoaded", function(event) {
    
-    //código a ejecutar cuando el DOM está listo para recibir acciones
-    // debugger
     const originalFilters = [
         {id: 1},
         {id: 2},
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     const hideCartsElements = (selectedFilters) => {
         selectedFilters.map((filt) => {
-            console.log(filt)
             const elements = (document.getElementsByClassName(`filter-${filt.id}`))
             for (let i = 0; i < elements.length; i++) {
                 elements[i].setAttribute("style", "display:none;")
@@ -42,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     const showCartsElements = (selectedFilters) => {
         selectedFilters.map((filt) => {
-            console.log(filt)
             const elements = (document.getElementsByClassName(`filter-${filt.id}`))
             for (let i = 0; i < elements.length; i++) {
                 elements[i].removeAttribute(`style`)

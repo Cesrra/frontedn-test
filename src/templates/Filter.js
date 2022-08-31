@@ -14,12 +14,14 @@ class Filter {
   }
 
   getFilters() {
-    return this.filters.filter((filt, i) => {
-      const compareFilt = this.selectedFilters[i]
-      if(compareFilt == null){
+    const result = this.filters.filter((filt, i) => {
+      const isThere = this.selectedFilters.find(select => select.id == filt.id)
+      if(!isThere){
         return filt
       }
     })
+
+    return result
   }
 
   selectFilter(id, status) {

@@ -41,13 +41,16 @@ var Filter = /*#__PURE__*/function () {
     value: function getFilters() {
       var _this = this;
 
-      return this.filters.filter(function (filt, i) {
-        var compareFilt = _this.selectedFilters[i];
+      var result = this.filters.filter(function (filt, i) {
+        var isThere = _this.selectedFilters.find(function (select) {
+          return select.id == filt.id;
+        });
 
-        if (compareFilt == null) {
+        if (!isThere) {
           return filt;
         }
       });
+      return result;
     }
   }, {
     key: "selectFilter",
@@ -299,7 +302,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   var hideCartsElements = function hideCartsElements(selectedFilters) {
     selectedFilters.map(function (filt) {
-      console.log(filt);
       var elements = document.getElementsByClassName("filter-".concat(filt.id));
 
       for (var i = 0; i < elements.length; i++) {
@@ -310,7 +312,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   var showCartsElements = function showCartsElements(selectedFilters) {
     selectedFilters.map(function (filt) {
-      console.log(filt);
       var elements = document.getElementsByClassName("filter-".concat(filt.id));
 
       for (var i = 0; i < elements.length; i++) {
@@ -322,6 +323,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var filterAction = function filterAction() {
     showCartsElements(originalFilters);
     var selectedFilters = filter.getFilters();
+    debugger;
     hideCartsElements(selectedFilters);
   };
 
