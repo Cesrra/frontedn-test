@@ -270,7 +270,6 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   //código a ejecutar cuando el DOM está listo para recibir acciones
-  // debugger
   var originalFilters = [{
     id: 1
   }, {
@@ -323,7 +322,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var filterAction = function filterAction() {
     showCartsElements(originalFilters);
     var selectedFilters = filter.getFilters();
-    debugger;
     hideCartsElements(selectedFilters);
   };
 
